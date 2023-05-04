@@ -1,0 +1,3 @@
+Crear el entorno virtual en la carpeta raíz: py -3 -m venv .venv
+Activar el entorno virtual con este comando: .venv\Scripts\activate
+Correr el nuestro servidor de Flask: python app.py

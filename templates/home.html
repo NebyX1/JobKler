@@ -1,0 +1,45 @@
+{% extends 'layout.html' %} 
+
+{% block content %}
+<section>
+  <div class="text-center mt-4 mb-4 p-3">
+    <h1 class="display-6 mb-2 text-primary">¿Buscas empleo?</h1>
+    <h1 class="display-1 text-primary">¡Estás en el lugar correcto!</h1>
+  </div>
+
+  <div id="headerImg" class="d-flex justify-content-center align-items-center">
+    <h3 class="text-white display-4">Encuentra el empleo que sueñas</h3>
+  </div>
+
+  <div id="aboutBlock" class="text-center mt-5 mb-5 border-top border-bottom border-4">
+
+    <h1>Sobre Nosotros</h1>
+    <p>¡Bienvenido/a a JobKler! Somos una plataforma diseñada para ayudarte a encontrar el trabajo de tus sueños de manera rápida y efectiva. Aunque no somos la página de búsqueda de empleo más grande del mundo, estamos orgullosos de ser la más efectiva y la que se preocupa más por sus usuarios.</p>
+
+    <p>Encontrar un trabajo puede ser una tarea difícil y estresante, pero nuestra página web está aquí para hacerte la vida más fácil. Nuestro enfoque se centra en el usuario y en hacer que el proceso de búsqueda de empleo sea lo más sencillo y efectivo posible. Nuestro equipo está siempre trabajando para mejorar la experiencia del usuario, por lo que siempre encontrarás las herramientas y recursos que necesitas para destacar en el mercado laboral.</p>
+        
+    <p>Nosotros entendemos que cada usuario tiene necesidades y expectativas únicas, es por eso que ofrecemos una variedad de herramientas y recursos para ayudarte a encontrar el trabajo perfecto. Desde la creación de un perfil personalizado hasta la búsqueda avanzada de empleos, nuestra plataforma está diseñada para adaptarse a ti y a tus necesidades.</p>
+        
+    <p>Además, en nuestra página web no solo encontrarás una gran cantidad de ofertas de trabajo, sino que también podrás acceder a recursos para mejorar tus habilidades y conocimientos. Desde cursos en línea hasta tutoriales en video, nuestra plataforma te ofrece todas las herramientas que necesitas para tener éxito en tu carrera.</p>
+        
+    <p>En resumen, si buscas una página web de búsqueda de empleo que realmente se preocupa por ti y por tus necesidades, no busques más. Somos la plataforma más efectiva y la que más se preocupa por sus usuarios. ¡Regístrate ahora y comienza a dar los primeros pasos hacia tu carrera soñada!</p>
+  </div>
+
+  <h3 class="display-6 text-primary mb-2">Job Openings!</h3>
+  {% for job in Jobs %}
+  <div class="mb-4 border-bottom pb-1">
+    <div class="row">
+      <div class="col-9">
+        <div><b>Posición:</b> {{ job['position'] }}</div>
+        <div>Ciudad: {{ job['city'] }}</div>
+        <div>Salario: {{ job['salary'] }}</div>
+      </div>
+      <div class="col-3 d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-outline-primary">Aplicar!</button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}

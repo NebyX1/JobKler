@@ -1,0 +1,43 @@
+{% extends 'layout.html' %} 
+
+{% block content %}
+
+
+<div id="singleJobPage" class="d-flex flex-column">
+
+    <div id="jobPosition" class="mt-3 p-2 w-75 shadow-sm border-bottom border-2 rounded-4">
+        <h4 class="">{{job['title']}}</h4>
+        <p class="lead">{{job['location']}}</p>
+        <p class="text-secondary">Debes estar logueado para postularte</p>
+        <a href="#" type="button" class="btn btn-primary">Postular!</a>
+    </div>
+
+<div id="jobDescription" class="mt-2 p-2 w-75 shadow-sm border-bottom border-2 rounded-4">
+
+    <h6 class="mb-5">Salary: {{job['currency']}} {{job['salary']}}</h6>
+
+    <h6 class="mb-2">Responsabilidades:</h6>
+    <ul>
+        {% if job.responsabilities %}
+            {% for line in job.responsabilities.split("\n") %}
+            <li class="fontLiSize">{{ line }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+<h6 class="mt-5 mb-2">Requerimentos:</h6>
+    <ul>
+        {% if job.requirements %}
+            {% for line in job.requirements.split("\n") %}
+            <li class="fontLiSize">{{ line }}</li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+
+</div>
+
+{% include 'components/application_form.html' %}
+
+</div>
+
+
+{% endblock %}

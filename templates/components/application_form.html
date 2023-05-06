@@ -1,0 +1,28 @@
+<div id="aplicationForm" class="p-5 mb-3 mt-2 w-50 shadow-sm border-bottom border-2 rounded-4">
+<h4>Formulario de Aplicación:</h4>
+<form action="/job/{{job['id']}}/apply" method="POST">
+    <div class="mb-3">
+      <label for="nameInput" class="form-label">Nombre:</label>
+      <input type="text" class="form-control" id="nameInput" name="name" aria-describedby="nameHelp">
+      <div id="nameHelp" class="form-text">Escriba su nombre completo.</div>
+    </div>
+    <div class="mb-3">
+      <label for="emailInput" class="form-label">Email:</label>
+      <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Nunca compartiremos sus datos con nadie</div>
+    </div>
+    <div class="mb-3">
+      <label for="linkedinInput" class="form-label">Enlace a su perfil de LinkedIn:</label>
+      <input type="text" class="form-control" id="linkedinInput" name="linkedin" aria-describedby="linkedinHelp">
+    </div>
+    <div class="mb-3">
+      <label for="educationInput" class="form-label">Education:</label>
+      <textarea id="educationInput" name="education" class="form-control" aria-label="textareaEducation"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="workExperienceInput" class="form-label">Experiencia Loaboral:</label>
+      <textarea id="workExperienceInput" name="work_experience" class="form-control" aria-label="workExperienceEducation"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>

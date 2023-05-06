@@ -15,3 +15,23 @@ body{
 #aboutBlock{
     min-height: 15vh;
 }
+
+#singleJobPage{
+    min-height: 100vh;
+}
+
+#jobPosition{
+    max-height: 22vh;
+}
+
+#jobDescription{
+    min-height: 50vh
+}
+
+.fontLiSize{
+    font-size:small;
+}
+
+#applicationConfirm{
+    min-height: 100vh
+}
